@@ -431,7 +431,6 @@ function initObject() {
                 scene.add(s2);
                 points.push([s1, s2]);
 
-                console.log(num1, a1, b1, i);
                 mapPlay[num1][a1][b1] = { index: i, rank: 0, origx: map.points[i].x1, origy: map.points[i].y1, origz: map.points[i].z1 };
                 mapPlay[num2][a2][b2] = { index: i, rank: 0, origx: map.points[i].x2, origy: map.points[i].y2, origz: map.points[i].z2 };
                 completion2 += 2;
