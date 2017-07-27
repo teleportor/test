@@ -4,7 +4,7 @@ const colorTable = {
     square: 0x898989,
     lightSquare: 0x999999,
     points: [
-        0xFF6347, 0x32CD32, 0xFFD700, 0x00BFFF, 0x9932CC
+        0xFF6347, 0x32CD32, 0xFFD700, 0x00BFFF, 0x9932CC, 0xFFA500, 0x0000CD
     ],
     lightPoint: 0xFFFFFF
 }
@@ -93,7 +93,7 @@ function initCamera() {
             break;
         case '3d':
             camera = new THREE.PerspectiveCamera(90, width / height, 1, 10000);
-            camRadius = 540000 / size;
+            camRadius = 1000;
             camera.position.x = camRadius * Math.sqrt(1 / 3);
             camera.position.y = camRadius * Math.sqrt(1 / 3);
             camera.position.z = camRadius * Math.sqrt(1 / 3);
@@ -470,7 +470,6 @@ window.onresize = function () {
     camera.position.x = p.x;
     camera.position.y = p.y;
     camera.position.z = p.z;
-    camera.position.multiplyScalar(lastSize / size);
     camera.up.x = u.x;
     camera.up.y = u.y;
     camera.up.z = u.z;
@@ -879,6 +878,7 @@ window.onmousemove = function (event) {
                 else if (og.index !== -1
                     && ng.index === og.index
                     && ng.rank === 0
+                    && !(nx === og.origx && ny === og.origy && nz === og.origz)
                     && caseCode !== -1
                 ) {
                     lastCoordinate = { x: currentCoordinate.x, y: currentCoordinate.y, z: currentCoordinate.z }
