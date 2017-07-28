@@ -1108,13 +1108,17 @@ document.getElementById('canvasdiv').onmousedown = function (event) {
             if (x > document.body.clientWidth * 0.38 && x < document.body.clientWidth * 0.43) {
                 level++;
                 state = 3;
+                time = 0;
                 threeStart(level - 1, false);
+                
             }
             if (x > document.body.clientWidth * 0.48 && x < document.body.clientWidth * 0.53) {
                 state = 1;
+                time = 0;
             }
             if (x > document.body.clientWidth * 0.58 && x < document.body.clientWidth * 0.65) {
                 state = 3;
+                time = 0;
                 threeStart(level - 1, false);
             }
             start();
@@ -1127,13 +1131,16 @@ document.getElementById('canvasdiv').onmousedown = function (event) {
             if (x > document.body.clientWidth * 0.38 && x < document.body.clientWidth * 0.43) {
                 level++;
                 state = 4;
+                time = 0;
                 threeStart(level - 1, true);
             }
             if (x > document.body.clientWidth * 0.48 && x < document.body.clientWidth * 0.53) {
                 state = 2;
+                time = 0;
             }
             if (x > document.body.clientWidth * 0.58 && x < document.body.clientWidth * 0.65) {
                 state = 4;
+                time = 0;
                 threeStart(level - 1, true);
             }
             start();
